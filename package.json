@@ -1,6 +1,7 @@
 {
   "name": "eruda-features",
   "version": "1.0.0",
+  "description": "Eruda plugin for browser feature detections",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0",
@@ -11,9 +12,11 @@
   },
   "keywords": [
     "eruda",
+    "features",
     "plugin"
   ],
-  "author": "",
+  "author": "redhoodsu",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.2.2",
     "babel-core": "^6.26.0",
