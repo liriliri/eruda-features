@@ -1,0 +1,10 @@
+<ul>
+    {{#each features}}
+        <li>
+            <a href="http://caniuse.com/#search={{@key}}" target="_blank" class="eruda-inner-wrapper {{#if this}}eruda-ok{{/if}}">
+                {{@key}}
+            </a>
+        </li>
+    {{/each}}
+</ul>
+<a class="eruda-html5test" target="_blank" href="http://html5test.com">Go to HTML5 Test</a>

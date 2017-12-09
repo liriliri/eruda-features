@@ -1,0 +1,79 @@
+@mixin overflow-auto($direction: 'both') {
+    @if $direction == 'both' {
+        overflow: auto;
+    } @else {
+        overflow-#{$direction}: auto;
+    }
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin clear-float {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+$anim-duration: .3s;
+$font-size-s: 12px;
+$red: #f44336;
+$red-dark: #b71c1c;
+$gray: #707d8b;
+$gray-light: #eceffe;
+$blue: #2196f3;
+$blue-dark: #1565c0;
+
+.features {
+    padding-bottom: 40px;
+    ul {
+        @include overflow-auto(y);
+        @include clear-float();
+        height: 100%;
+        li {
+            width: 33.3%;
+            float: left;
+            padding: 5px;
+            .inner-wrapper {
+                @include overflow-auto(x);
+                font-size: $font-size-s;
+                text-decoration: underline;
+                color: #fff;
+                display: block;
+                padding: 10px;
+                border-radius: 4px;
+                text-align: center;
+                background: $red;
+                transition: background $anim-duration;
+                &:active {
+                    background: $red-dark;
+                }
+                &.ok {
+                    background: #fff;
+                    color: $gray;
+                    &:active {
+                        background: $gray-light;
+                    }
+                }
+            }
+        }
+    }
+    .html5test {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        width: 100%;
+        background: $blue;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 10px;
+        transition: background $anim-duration;
+        &:active {
+            background: $blue-dark;
+        }
+    }
+}
