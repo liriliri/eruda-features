@@ -1,8 +1,8 @@
 {
   "name": "eruda-features",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eruda plugin for browser feature detections",
-  "main": "index.js",
+  "main": "eruda-features.js",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0",
     "build": "webpack && webpack -p",

@@ -1,6 +1,7 @@
 /src/
 /script/
 .eslintrc.json
+.eslintignore
 .gitignore
 .npmignore
 .travis.yml
