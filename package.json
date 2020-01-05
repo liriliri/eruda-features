@@ -1,6 +1,6 @@
 {
   "name": "eruda-features",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Eruda plugin for browser feature detections",
   "main": "eruda-features.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "webpack && webpack -p",
     "ci": "npm run lint && npm run build",
     "lint": "eslint src/**/*.js",
+    "format": "prettier src/index.js src/style.scss *.js .*.js --write",
     "buildModernizr": "node script/buildModernizr"
   },
   "repository": {
@@ -32,7 +33,8 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.7",
-    "eruda": "^1.3.1",
+    "eruda": "^2.0.0",
+    "eslint": "^4.12.1",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.6.0",
     "modernizr": "^3.5.0",
@@ -40,9 +42,9 @@
     "postcss": "^6.0.14",
     "postcss-class-prefix": "^0.3.0",
     "postcss-loader": "^2.0.9",
+    "prettier": "^1.19.1",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7",
-    "eslint": "^4.12.1"
+    "webpack-dev-server": "^2.9.7"
   }
 }
